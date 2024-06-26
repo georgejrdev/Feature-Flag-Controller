@@ -1,7 +1,7 @@
 package com.georgejrdev.utils.support;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +26,7 @@ public class Analyzer implements InterfaceAnalyzer{
                 break;
 
             default:
-                throw new Exception("Erro");
+                type = "undefined or method declaration";
         }
 
         return type;
@@ -37,6 +37,10 @@ public class Analyzer implements InterfaceAnalyzer{
     public String getDescription(String phrase){
         List<String> parameter = getParams(phrase);
 
+        if (parameter.isEmpty()){
+            return "undefined or method declaration";
+        }
+        
         return parameter.get(parameter.size()-1);
     }
 

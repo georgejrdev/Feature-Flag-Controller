@@ -7,6 +7,7 @@ import com.georgejrdev.utils.support.File;
 
 
 public class Main {
+    
     public static void main(String[] args) throws Exception {
 
         Analyzer analyzer = new Analyzer();
