@@ -106,7 +106,6 @@ public class Frame {
                 if (option == JFileChooser.APPROVE_OPTION) {
                     File selectedFolder = fileChooser.getSelectedFile();
                     String folderPath = selectedFolder.getAbsolutePath();
-                    System.out.println(folderPath);
 
                     try {
                         handleFolderSelection(frame, folderPath);

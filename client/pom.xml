@@ -19,7 +19,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.georgejrdev.FlagControl</mainClass>
+                            <mainClass>com.georgejrdev.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -33,7 +33,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.georgejrdev.FlagControl</mainClass>
+                                    <mainClass>com.georgejrdev.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
