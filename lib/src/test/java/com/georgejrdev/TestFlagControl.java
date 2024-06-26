@@ -46,14 +46,14 @@ public class TestFlagControl {
 
     @Test
     public void testFalseEnvFlag() throws Exception {
-        boolean result = flagControl.setNewFeatureFlag("TEST_FALSE_FLAG_CONTROL");
+        boolean result = flagControl.setNewFeatureFlag("TEST_FALSE_FLAG_CONTROL","TEST");
         assertEquals(false, result);
     }
 
 
     @Test
     public void testTrueEnvFlag() throws Exception {
-        boolean result = flagControl.setNewFeatureFlag("TEST_TRUE_FLAG_CONTROL");
+        boolean result = flagControl.setNewFeatureFlag("TEST_TRUE_FLAG_CONTROL","TEST");
         assertEquals(true, result);
     }
 
@@ -61,21 +61,21 @@ public class TestFlagControl {
     @Test
     public void testNullEnvFlag() {
         assertThrows(Exception.class, () -> {
-            flagControl.setNewFeatureFlag("TEST_NULL_FLAG_CONTROL");
+            flagControl.setNewFeatureFlag("TEST_NULL_FLAG_CONTROL","TEST");
         });
     }
 
 
     @Test
     public void testTrueUrlFlag(){
-        boolean result = flagControl.setNewFeatureFlag("http://127.0.0.1:3030/getTrue", "GET");
+        boolean result = flagControl.setNewFeatureFlag("http://127.0.0.1:3030/getTrue", "GET","TEST");
         assertEquals(true, result);      
     }
 
 
     @Test
     public void testFalseUrlFlag(){
-        boolean result = flagControl.setNewFeatureFlag("http://127.0.0.1:3030/getFalse", "GET");
+        boolean result = flagControl.setNewFeatureFlag("http://127.0.0.1:3030/getFalse", "GET","TEST");
         assertEquals(false, result);      
     }
 }

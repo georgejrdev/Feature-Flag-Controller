@@ -14,7 +14,7 @@ public class FlagControl implements InterfaceFlagControl{
 
 
     @Override
-    public boolean setNewFeatureFlag(String env) throws Exception{
+    public boolean setNewFeatureFlag(String env, String shortDescription) throws Exception{
 
         String variable = System.getenv(env);
 
@@ -29,17 +29,11 @@ public class FlagControl implements InterfaceFlagControl{
 
 
     @Override
-    public boolean setNewFeatureFlag(String url, String method){
+    public boolean setNewFeatureFlag(String url, String method, String shortDescription){
 
         String response = req.makeRequest(url, method);
         boolean result = Boolean.parseBoolean(response.replaceAll("[\\[\\](){}]", "").trim());
 
         return result;
-    }
-
-
-    @Override
-    public boolean setNewFeatureFlag(boolean value){
-        return value;
     }
 }
