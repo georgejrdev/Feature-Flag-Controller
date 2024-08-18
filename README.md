@@ -35,4 +35,4 @@
 
 [Lib - Feature Flag](https://github.com/georgejrdev/Feature-Flag-Controller/raw/main/lib/build/Feature-Flag-Lib.jar)
 
-[Client - Feature Flag](https://github.com/georgejrdev/Feature-Flag-Controller/raw/main/client/build/Feature%20Flag%20Client.jar)
+[Client - Feature Flag](https://github.com/georgejrdev/Feature-Flag-Controller/raw/main/client/build/Feature-Flag-Client.jar)
